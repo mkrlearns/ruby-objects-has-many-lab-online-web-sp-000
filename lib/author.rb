@@ -8,21 +8,17 @@ class Artist
   end
   
   def add_song(song)
-    @post << post
+    @posts << post
     post.author = self
   end
   
   def add_song_by_name(title)
     post = Post.new(title)
-    @post << post
+    @posts << post
     post.author = self
   end
   
-  def posts
-    @post
-  end
-  
-  def self.song_count
+  def self.post_count
     Post.all.count
   end
 
